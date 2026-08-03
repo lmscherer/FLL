@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anaheim Astromechs &mdash; FLL Explore Team</title>
+<meta name="description" content="Join the Anaheim Astromechs, a brand-new FLL Explore team for ages 5&ndash;7 tackling this year's BIOGLOW challenge!">
+<meta name="theme-color" content="#16240f">
+
+<meta property="og:title" content="Anaheim Astromechs &mdash; FLL Explore Team">
+<meta property="og:description" content="Join our brand-new FLL Explore team! Building, coding, and glowing our way through this year's BIOGLOW challenge.">
+<meta property="og:image" content="https://lmscherer.github.io/FLL/images/astromechs-logo.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --leaf-dark: #1c3a1f;
+    --leaf-mid: #2f5c33;
+    --bioglow-green: #b7d88a;
+    --bioglow-tan: #ead9b8;
+    --ink: #16210f;
+    --glow-pink: #ff6fd8;
+    --glow-magenta: #ff3ea5;
+    --glow-teal: #5ffbf1;
+    --paper: #fffdf8;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  body{
+    background: radial-gradient(ellipse at 50% -10%, #2a4a2e 0%, #16240f 55%, #0e1a0a 100%);
+    font-family:'Quicksand', sans-serif;
+    color: var(--paper);
+    display:flex;
+    justify-content:center;
+    padding: 28px 14px;
+    min-height:100vh;
+    overflow-x:hidden;
+  }
+
+  .card{
+    width:100%;
+    max-width:430px;
+    position:relative;
+    border-radius: 28px;
+    background: linear-gradient(180deg, #1f3320 0%, #14210f 100%);
+    border: 1px solid rgba(183,216,138,0.3);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.03), 0 30px 60px rgba(0,0,0,0.55), 0 0 90px -25px rgba(255,111,216,0.35);
+    overflow:hidden;
+    padding: 28px 24px 32px;
+  }
+
+  .sparkles span{
+    position:absolute;
+    border-radius:50%;
+    background: var(--glow-pink);
+    box-shadow: 0 0 8px 2px var(--glow-pink);
+    opacity:.8;
+    animation: twinkle 2.6s ease-in-out infinite;
+  }
+  @keyframes twinkle{
+    0%,100%{ opacity:.12; transform:scale(0.6); }
+    50%{ opacity:1; transform:scale(1); }
+  }
+
+  .eyebrow{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color: var(--glow-teal);
+    text-shadow: 0 0 12px rgba(95,251,241,0.5);
+    margin-bottom: 14px;
+  }
+  .eyebrow .dot{
+    width:7px; height:7px; border-radius:50%;
+    background: var(--glow-teal);
+    box-shadow: 0 0 10px 3px rgba(95,251,241,0.8);
+  }
+
+  h1{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:800;
+    font-size: 38px;
+    line-height: 0.98;
+    background: linear-gradient(90deg, #ffe1f8 0%, var(--glow-pink) 45%, #ffd2ec 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    filter: drop-shadow(0 0 16px rgba(255,111,216,0.4));
+    margin-bottom: 6px;
+  }
+
+  h1 .sub{
+    display:block;
+    font-size: 20px;
+    font-weight:700;
+    color: var(--bioglow-green);
+    filter: drop-shadow(0 0 10px rgba(183,216,138,0.55));
+    margin-top: 2px;
+  }
+
+  .tagline{
+    margin-top:12px;
+    font-size:14px;
+    color: #e9f5df;
+    line-height:1.5;
+  }
+  .tagline b{ color: var(--glow-pink); font-weight:700; }
+
+  /* Bio Glow official-style logo lockup */
+  .bioglow-badge{
+    display:flex;
+    border-radius: 16px;
+    overflow:hidden;
+    border: 2px solid var(--ink);
+    margin: 20px 0 4px;
+  }
+  .bioglow-badge .leaf-panel{
+    width: 38%;
+    background: linear-gradient(135deg, #2f5c33, #1c3a1f);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 14px 10px;
+  }
+  .bioglow-badge .fll-panel{
+    width: 62%;
+    background: var(--bioglow-tan);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding: 10px 12px;
+  }
+  .bioglow-badge .fll-panel .fll-text{
+    font-family:'Baloo 2', sans-serif;
+    color: var(--ink);
+    font-weight:800;
+    font-size:13px;
+    line-height:1.1;
+    font-style:italic;
+    text-align:left;
+  }
+  .bioglow-word{
+    background: var(--bioglow-green);
+    border: 2px solid var(--ink);
+    border-top:none;
+    border-radius: 0 0 16px 16px;
+    margin-top:-2px;
+    text-align:center;
+    padding: 14px 10px 16px;
+    margin-bottom: 20px;
+  }
+  .bioglow-word .word{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:800;
+    font-size: 40px;
+    color: var(--ink);
+    letter-spacing: 0.5px;
+  }
+  .bioglow-word .tm{
+    font-size:13px;
+    vertical-align: super;
+  }
+
+  .badge-strip{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin: 4px 0 20px;
+  }
+  .badge{
+    font-family:'Baloo 2', sans-serif;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.03em;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14);
+    color: var(--paper);
+  }
+  .badge.pink{ border-color: rgba(255,111,216,0.5); color:#ffe1f8; box-shadow: 0 0 14px -4px rgba(255,111,216,0.7) inset;}
+  .badge.teal{ border-color: rgba(95,251,241,0.5); color:#d3fffb; box-shadow: 0 0 14px -4px rgba(95,251,241,0.7) inset;}
+  .badge.green{ border-color: rgba(183,216,138,0.6); color:#eaf7d8; box-shadow: 0 0 14px -4px rgba(183,216,138,0.7) inset;}
+
+  .details{
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 18px;
+    padding: 4px 18px;
+    margin-bottom: 16px;
+  }
+  .details .row{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    font-size: 13px;
+    color:#eef7e4;
+    padding: 12px 0;
+  }
+  .details .row + .row{
+    border-top: 1px dashed rgba(255,255,255,0.1);
+  }
+  .details .icon{
+    font-size:15px;
+    line-height:1.4;
+  }
+  .details .label{
+    font-weight:700;
+    color: var(--bioglow-green);
+    margin-right:4px;
+  }
+  .details .row .medal{ color: var(--glow-pink); font-weight:700; }
+
+  .qr-zone{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    background: linear-gradient(135deg, rgba(255,111,216,0.14), rgba(183,216,138,0.16));
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 20px;
+    padding: 16px;
+  }
+  .qr-zone .qr-frame{
+    background: var(--paper);
+    padding: 8px;
+    border-radius: 14px;
+    box-shadow: 0 0 22px -4px rgba(255,111,216,0.8);
+    flex-shrink:0;
+  }
+  .qr-zone .qr-frame img{
+    display:block;
+    width: 108px;
+    height: 108px;
+    border-radius: 6px;
+  }
+  .qr-zone .qr-text{
+    font-family:'Baloo 2', sans-serif;
+  }
+  .qr-zone .qr-text .cta{
+    font-weight:800;
+    font-size: 16px;
+    color: var(--paper);
+    margin-bottom:4px;
+  }
+  .qr-zone .qr-text .cta span{
+    color: var(--glow-pink);
+    text-shadow: 0 0 10px rgba(255,111,216,0.7);
+  }
+  .qr-zone .qr-text p{
+    font-family:'Quicksand', sans-serif;
+    font-size:12px;
+    color:#e5f2d8;
+    line-height:1.4;
+  }
+
+  .footer-note{
+    text-align:center;
+    margin-top:18px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing:.03em;
+  }
+
+  .official-logo-zone{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin: 22px 0 4px;
+    padding: 18px 0;
+  }
+  .official-logo-zone img{
+    display:block;
+    width: 78%;
+    max-width: 260px;
+    height:auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="sparkles" id="sparkles"></div>
+
+  <div class="eyebrow"><span class="dot"></span> <i>FIRST</i>&reg; LEGO&reg; League Explore &middot; K&ndash;2</div>
+
+  <h1>Anaheim<br>Astromechs<span class="sub">are recruiting droids ✦</span></h1>
+
+  <p class="tagline">Join our brand-new FLL Explore team! We're building, coding, and glowing our way through this year's <b>BIOGLOW<sup style="font-size:0.6em;">™</sup></b> challenge &mdash; and we want YOU on our crew.</p>
+
+  <div class="official-logo-zone">
+    <img src="images/astromechs-logo.png" alt="FIRST LEGO League Explore official logo">
+  </div>
+
+  <div class="badge-strip">
+    <span class="badge green">🌱 BIOGLOW<sup style="font-size:0.6em;">™</sup> Season</span>
+    <span class="badge teal">🤖 LEGO Builds</span>
+    <span class="badge pink">✨ Ages 5&ndash;7</span>
+  </div>
+
+  <div class="details">
+    <div class="row"><span class="icon">🚀</span><div><span class="label">Kickoff:</span>Tentatively planned for August 15 &mdash; date not final yet</div></div>
+    <div class="row"><span class="icon">🗓️</span><div><span class="label">Meetings:</span>1&ndash;2x a week &mdash; once weekly to start, ramping up to twice a week closer to competitions</div></div>
+    <div class="row"><span class="icon">📍</span><div><span class="label">Where:</span>Haskett Library or Scherers' home, weekly</div></div>
+    <div class="row"><span class="icon">🏆</span><div><span class="label">Competitions:</span>1&ndash;2 events in later fall, dates TBD once registration opens</div></div>
+    <div class="row"><span class="icon">💰</span><div><span class="label">Cost:</span>$50 per child &mdash; covers team &amp; event registration, t-shirt/spiritwear, and technology</div></div>
+    <div class="row"><span class="icon">🎖️</span><div><span class="label">The best part:</span><span class="medal">everyone gets a medal!</span></div></div>
+  </div>
+
+  <div class="qr-zone">
+    <div class="qr-frame">
+      <img src="images/join-qr.png" alt="QR code to join Anaheim Astromechs team">
+    </div>
+    <div class="qr-text">
+      <div class="cta">Scan to <span>join us!</span></div>
+      <p>Use the QR code to open the team signup and join the Anaheim Astromechs FLL Explore team!</p>
+    </div>
+  </div>
+
+  <div class="footer-note">Questions? Text Coach Lindsay Scherer 💫</div>
+</div>
+
+<script>
+  const field = document.getElementById('sparkles');
+  const colors = ['#ff6fd8','#b7d88a','#5ffbf1','#ffd2ec'];
+  for(let i=0;i<20;i++){
+    const s = document.createElement('span');
+    const size = 2 + Math.random()*3;
+    s.style.width = size+'px';
+    s.style.height = size+'px';
+    s.style.left = Math.random()*100+'%';
+    s.style.top = Math.random()*100+'%';
+    s.style.background = colors[i % colors.length];
+    s.style.boxShadow = '0 0 8px 2px ' + colors[i % colors.length];
+    s.style.animationDelay = (Math.random()*2.6)+'s';
+    field.appendChild(s);
+  }
+</script>
+
+</body>
+</html>
