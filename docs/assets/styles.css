@@ -291,6 +291,7 @@ p.body-text + p.body-text{ margin-top:10px; }
   border: 1px solid rgba(255,255,255,0.14);
   border-radius: 20px;
   padding: 16px;
+  margin-bottom: 20px;
 }
 .qr-zone .qr-frame{
   background: var(--paper);
@@ -331,6 +332,14 @@ p.body-text + p.body-text{ margin-top:10px; }
   font-size: 11px;
   color: rgba(255,255,255,0.45);
   letter-spacing:.03em;
+}
+
+.trademark-note{
+  text-align:center;
+  margin-top:8px;
+  font-size: 9.5px;
+  line-height:1.5;
+  color: rgba(255,255,255,0.28);
 }
 
 .official-logo-zone{
