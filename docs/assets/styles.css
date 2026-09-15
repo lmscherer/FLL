@@ -8,6 +8,7 @@
   --glow-magenta: #ff3ea5;
   --glow-teal: #5ffbf1;
   --paper: #fffdf8;
+  --content-max: 430px;
 }
 
 *{ box-sizing:border-box; margin:0; padding:0; }
@@ -27,7 +28,7 @@ body{
 /* Nav */
 .site-nav{
   width:100%;
-  max-width:430px;
+  max-width: var(--content-max);
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap:6px;
@@ -60,7 +61,7 @@ body{
 
 .card{
   width:100%;
-  max-width:430px;
+  max-width: var(--content-max);
   position:relative;
   border-radius: 28px;
   background: linear-gradient(180deg, #1f3320 0%, #14210f 100%);
@@ -425,4 +426,34 @@ p.body-text + p.body-text{ margin-top:10px; }
   display:block;
   width:100%;
   border:none;
+}
+
+/* Desktop / tablet scaling — same card-based layout, just wider and roomier
+   instead of a phone-width column stranded in the middle of a big screen */
+@media (min-width: 640px){
+  :root{ --content-max: 600px; }
+
+  body{ padding: 48px 20px 60px; }
+
+  .card{ padding: 40px 44px 46px; border-radius: 32px; }
+
+  h1{ font-size: 46px; }
+  h1 .sub{ font-size: 23px; }
+  h2{ font-size: 28px; }
+  h3{ font-size: 18px; }
+
+  .tagline, p.body-text{ font-size: 15px; }
+  .card ul{ font-size: 15px; }
+
+  .site-nav a{ font-size: 12.5px; padding: 10px 8px; }
+
+  .qr-zone .qr-frame img{ width: 128px; height: 128px; }
+
+  .coach-photo{ max-width: 260px; }
+}
+
+@media (min-width: 900px){
+  :root{ --content-max: 680px; }
+
+  .card{ padding: 46px 52px 52px; }
 }
